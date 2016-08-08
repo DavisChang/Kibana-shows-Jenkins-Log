@@ -8,9 +8,10 @@ services:
     image: elasticsearch
     ports:
       - 9200:9200
-    volumes:
-      - $PWD/esdata:/usr/share/elasticsearch/data
-      - $PWD/config:/usr/share/elasticsearch/config
+      - 9300:9300
+    #volumes:
+    #  - "$PWD/esdata":/usr/share/elasticsearch/data
+    #  - "$PWD/config":/usr/share/elasticsearch/config
   kibana:
     #restart: always
     container_name: kibana-log-jenkins
